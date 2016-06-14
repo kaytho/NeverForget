@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <a href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'></a>
+    <a href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></a>
+  </head>
+  <body>
+
+  <form id="formAppointment" name="formAppointment" method='post' action='/appointments' data-parsley-validate=''>
+    <div>
+       Name: <input type="text" name="name" id="inputName" placeholder="Name" required='' data-parsley-maxlength='20' data-parsley-maxlength-message="This field can't have more than 20 characters">
+    </div>
+    <div>
+       Phone Number: <input type="number" name="phoneNumber" id="inputPhoneNumber" required='' placeholder="Phone Number">
+    </div>
+    <div>
+       Appointment Date: <input type="text" name="time" id="inputDate" placeholder="Date of Appointment" required=''>
+    </div>
+    <div>
+       Notification Time: <select name="notification" id="selectDelta" required=''>
+          <option value="">Select a time</option>
+          <option value="0">Now</option>
+          <option value="5">5 minutes</option>
+          <option value="15">15 minutes</option>
+          <option value="30">30 Minutes</option>
+          <option value="45">45 Minutes</option>
+          <option value="60">60 Minutes</option>
+
+        </select>
+    </div>
+<button type="submit">Create Appoinment</button>
+
+  </form>
+
+  </body>
+</html>
